@@ -1,0 +1,1182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="edujinniModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Achievement_details">
+    <Key>
+      <PropertyRef Name="achievement_id" />
+    </Key>
+    <Property Name="achievement_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="achievement_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="achievement_description" Type="nvarchar" MaxLength="50" />
+    <Property Name="achievement_section" Type="nvarchar" MaxLength="50" />
+    <Property Name="achievement_date" Type="date" Nullable="false" />
+    <Property Name="achievement_student_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="student_id" Type="int" Nullable="false" />
+    <Property Name="section_id" Type="int" />
+    <Property Name="class_id" Type="int" />
+  </EntityType>
+  <EntityType Name="Admin_details">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="full_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mobile_no" Type="bigint" Nullable="false" />
+    <Property Name="gender" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="dateof_birth" Type="date" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="flat_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="street1" Type="nvarchar" MaxLength="50" />
+    <Property Name="area" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="pincode" Type="int" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="admin_image" Type="image" Nullable="false" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="assignment_details">
+    <Key>
+      <PropertyRef Name="assignment_id" />
+    </Key>
+    <Property Name="assignment_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="assignment_class" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="assignment_section" Type="nvarchar" MaxLength="50" />
+    <Property Name="assignment_subject" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="assignment_enter_topic" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="assignment_from_date" Type="date" Nullable="false" />
+    <Property Name="assignment_to_date" Type="date" Nullable="false" />
+    <Property Name="assignment_related_test" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="teacher_id" Type="int" Nullable="false" />
+    <Property Name="student_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="attendence_details">
+    <Key>
+      <PropertyRef Name="attendence_id" />
+    </Key>
+    <Property Name="attendence_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="class_id" Type="int" Nullable="false" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="attendence_section" Type="nvarchar" MaxLength="50" />
+    <Property Name="attendence_setion" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="attendence_roll_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="attendence_parent_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_id" Type="int" Nullable="false" />
+    <Property Name="attendence_status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="section_id" Type="int" />
+    <Property Name="attendence_posted_by" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="class_details">
+    <Key>
+      <PropertyRef Name="class_id" />
+    </Key>
+    <Property Name="class_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="class_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="class_section_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="section_id" Type="int" Nullable="false" />
+    <Property Name="teacher_id" Type="int" />
+    <Property Name="school_id" Type="int" />
+  </EntityType>
+  <EntityType Name="dairy_details">
+    <Key>
+      <PropertyRef Name="dairy_id" />
+    </Key>
+    <Property Name="dairy_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="dairy_class" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dairy_section" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dairy_date" Type="date" Nullable="false" />
+    <Property Name="dairy_subject" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dairy_units" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="dairy_todays_work" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="dairy_todays_homework" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="student_id" Type="int" Nullable="false" />
+    <Property Name="teacher_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="event_details">
+    <Key>
+      <PropertyRef Name="event_id" />
+    </Key>
+    <Property Name="event_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="event_image" Type="varchar" MaxLength="300" />
+    <Property Name="event_date" Type="date" Nullable="false" />
+    <Property Name="event_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="event_description" Type="nvarchar(max)" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="section_id" Type="int" />
+    <Property Name="class_id" Type="int" />
+  </EntityType>
+  <EntityType Name="exam_details">
+    <Key>
+      <PropertyRef Name="exam_id" />
+    </Key>
+    <Property Name="exam_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="exam_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="exam_start_date" Type="date" Nullable="false" />
+    <Property Name="exam_end_date" Type="date" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="exam_results">
+    <Key>
+      <PropertyRef Name="examresult_id" />
+    </Key>
+    <Property Name="examresult_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teacher_id" Type="int" Nullable="false" />
+    <Property Name="student_id" Type="int" Nullable="false" />
+    <Property Name="exam_id" Type="int" Nullable="false" />
+    <Property Name="examresult_marks" Type="int" Nullable="false" />
+    <Property Name="examresult_total_marks" Type="int" Nullable="false" />
+    <Property Name="examresult_subjects" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="examresult_unit" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+  </EntityType>
+  <EntityType Name="examclass_details">
+    <Key>
+      <PropertyRef Name="examclass_id" />
+    </Key>
+    <Property Name="examclass_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="examclass_class" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="examclass_section" Type="nvarchar" MaxLength="50" />
+    <Property Name="examclass_exam_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="examclass_start_date" Type="date" Nullable="false" />
+    <Property Name="examclass_end_date" Type="date" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="examsubject_details">
+    <Key>
+      <PropertyRef Name="examsubject_id" />
+    </Key>
+    <Property Name="examsubject_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="examsubject_class" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="examsubject_section" Type="nvarchar" MaxLength="50" />
+    <Property Name="examsubject_subject_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="examsubject_subject_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="examsubject_marks" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="examsubject_date" Type="date" Nullable="false" />
+    <Property Name="examsubject_start_time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="examsubject_end_time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="section_id" Type="int" />
+    <Property Name="class_id" Type="int" />
+    <Property Name="exam_id" Type="int" />
+    <Property Name="examclass_id" Type="int" />
+    <Property Name="examsubject_syllabus" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="guest_signup">
+    <Key>
+      <PropertyRef Name="guest_id" />
+    </Key>
+    <Property Name="guest_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="first_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="last_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="mobile_no" Type="bigint" Nullable="false" />
+    <Property Name="dateof_birth" Type="date" Nullable="false" />
+    <Property Name="create_pswd" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="confirm_pswd" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="gender" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+  </EntityType>
+  <EntityType Name="leaverequest">
+    <Key>
+      <PropertyRef Name="leaverequest_id" />
+    </Key>
+    <Property Name="leaverequest_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="leaverequest_from_date" Type="date" Nullable="false" />
+    <Property Name="leaverequest_to_date" Type="date" Nullable="false" />
+    <Property Name="leaverequest_description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="leaverequest_requested_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="leaverequest_status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="leaverequest_aproved_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="school_details">
+    <Key>
+      <PropertyRef Name="school_id" />
+    </Key>
+    <Property Name="school_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="school_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="school_flat_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="school_street" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="school_area" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="school_city" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="school_state" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="school_pincode" Type="int" Nullable="false" />
+    <Property Name="school_phone_no" Type="bigint" Nullable="false" />
+    <Property Name="school_reg_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="school_image" Type="varchar" MaxLength="300" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="insert_date" Type="date" Nullable="false" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="update_date" Type="date" Nullable="false" />
+    <Property Name="admin_full_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="admin_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="admin_mobile_no" Type="bigint" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" />
+    <Property Name="admin_image" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="section_id" />
+    </Key>
+    <Property Name="section_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="section_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" />
+  </EntityType>
+  <EntityType Name="student_details">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="student_image" Type="varchar" MaxLength="300" />
+    <Property Name="student_section" Type="nvarchar" MaxLength="50" />
+    <Property Name="student_first_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_last_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_roll_no" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_chiled_no" Type="int" />
+    <Property Name="student_dob" Type="date" Nullable="false" />
+    <Property Name="student_gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_father_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_father_mobile_no" Type="bigint" Nullable="false" />
+    <Property Name="student_father_occupation" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_mother_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_mother_mobile_no" Type="bigint" />
+    <Property Name="student_mother_occupation" Type="nvarchar" MaxLength="50" />
+    <Property Name="student_no_of_siblings" Type="int" />
+    <Property Name="student_flat_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="student_buliding_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="student_street" Type="nvarchar" MaxLength="50" />
+    <Property Name="student_street1" Type="nvarchar" MaxLength="50" />
+    <Property Name="student_area" Type="nvarchar" MaxLength="50" />
+    <Property Name="student_city" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_state" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_pincode" Type="int" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="student_admission_date" Type="date" Nullable="false" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="Student_status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="student_class" Type="nvarchar" MaxLength="50" />
+    <Property Name="section_id" Type="int" />
+    <Property Name="class_id" Type="int" />
+    <Property Name="student_admission_id" Type="nvarchar" MaxLength="30" />
+    <Property Name="student_password" Type="nvarchar" MaxLength="30" />
+    <Property Name="parent_password" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="subject_details">
+    <Key>
+      <PropertyRef Name="subject_id" />
+    </Key>
+    <Property Name="subject_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="section" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="subject_type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="subject_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="class_id" Type="int" Nullable="false" />
+    <Property Name="teacher_id" Type="int" Nullable="false" />
+    <Property Name="section_id" Type="int" />
+  </EntityType>
+  <EntityType Name="syllabus_details">
+    <Key>
+      <PropertyRef Name="syllabus_id" />
+    </Key>
+    <Property Name="syllabus_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="syllabus_class" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="syllabus_subject" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="syllabus_unit" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="syllabus_subunit" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="syllabus_topic" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="teacher_details">
+    <Key>
+      <PropertyRef Name="teacher_id" />
+    </Key>
+    <Property Name="teacher_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="teacher_image" Type="image" />
+    <Property Name="teacher_first_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacher_last_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacher_email" Type="nvarchar" MaxLength="50" />
+    <Property Name="teacher_phone_no" Type="bigint" Nullable="false" />
+    <Property Name="teacher_dob" Type="date" Nullable="false" />
+    <Property Name="teacher_gender" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="teacher_subject1" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacher_subject2" Type="nvarchar" MaxLength="50" />
+    <Property Name="teacher_qualification" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacher_department" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacher_flat_no" Type="nvarchar" MaxLength="50" />
+    <Property Name="teacher_street" Type="nvarchar" MaxLength="50" />
+    <Property Name="teacher_area" Type="nvarchar" MaxLength="50" />
+    <Property Name="teacher_city" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacher_state" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="teacher_pincode" Type="int" Nullable="false" />
+    <Property Name="teacher_date_of_joining" Type="date" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="class_id" Type="int" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="teacher_teacherid" Type="nvarchar" MaxLength="20" />
+    <Property Name="teacher_buildingname" Type="nvarchar" MaxLength="20" />
+    <Property Name="teacher_street1" Type="nvarchar" MaxLength="20" />
+    <Property Name="teacher_status" Type="nvarchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="timetable_details">
+    <Key>
+      <PropertyRef Name="timetable_id" />
+    </Key>
+    <Property Name="timetable_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="timetable_day" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="subject_id" Type="int" Nullable="false" />
+    <Property Name="teacher_id" Type="int" Nullable="false" />
+    <Property Name="class_id" Type="int" Nullable="false" />
+    <Property Name="timetable_section" Type="nvarchar" MaxLength="50" />
+    <Property Name="timetable_start_time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="timetable_end_time" Type="time" Precision="7" Nullable="false" />
+    <Property Name="insert_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="insert_date" Type="date" />
+    <Property Name="update_by" Type="nvarchar" MaxLength="50" />
+    <Property Name="update_date" Type="date" />
+    <Property Name="school_id" Type="int" Nullable="false" />
+    <Property Name="section_id" Type="int" />
+  </EntityType>
+  <Association Name="FK__Achieveme__class__4C364F0E">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="0..1" />
+    <End Role="Achievement_details" Type="Self.Achievement_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="Achievement_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Achieveme__secti__44952D46">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="Achievement_details" Type="Self.Achievement_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="Achievement_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__attendenc__secti__4589517F">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="attendence_details" Type="Self.attendence_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="attendence_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__class_det__schoo__3FD07829">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="0..1" />
+    <End Role="class_details" Type="Self.class_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="class_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__event_det__class__477199F1">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="0..1" />
+    <End Role="event_details" Type="Self.event_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="event_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__event_det__secti__467D75B8">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="event_details" Type="Self.event_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="event_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examsubje__class__4959E263">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="0..1" />
+    <End Role="examsubject_details" Type="Self.examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examsubje__exam___4A4E069C">
+    <End Role="exam_details" Type="Self.exam_details" Multiplicity="0..1" />
+    <End Role="examsubject_details" Type="Self.examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="exam_details">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examsubje__examc__4B422AD5">
+    <End Role="examclass_details" Type="Self.examclass_details" Multiplicity="0..1" />
+    <End Role="examsubject_details" Type="Self.examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="examclass_details">
+        <PropertyRef Name="examclass_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="examclass_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examsubje__secti__4865BE2A">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="examsubject_details" Type="Self.examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section__school___2F9A1060">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="0..1" />
+    <End Role="Section" Type="Self.Section" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="Section">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student_d__class__43A1090D">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="0..1" />
+    <End Role="student_details" Type="Self.student_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="student_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student_d__secti__42ACE4D4">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="student_details" Type="Self.student_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="student_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__subject_d__secti__40C49C62">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="subject_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__timetable__secti__41B8C09B">
+    <End Role="Section" Type="Self.Section" Multiplicity="0..1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_355">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="subject_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_437">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="Admin_details" Type="Self.Admin_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="Admin_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_482">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="1" />
+    <End Role="attendence_details" Type="Self.attendence_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="attendence_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_485">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="attendence_details" Type="Self.attendence_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="attendence_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_492">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="attendence_details" Type="Self.attendence_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="attendence_details">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_504">
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subject_details">
+        <PropertyRef Name="subject_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="subject_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_507">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_510">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_523">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="event_details" Type="Self.event_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="event_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_545">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="1" />
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="subject_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_558">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="exam_details" Type="Self.exam_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="exam_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_573">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="examclass_details" Type="Self.examclass_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="examclass_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_595">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="examsubject_details" Type="Self.examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_610">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="syllabus_details" Type="Self.syllabus_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="syllabus_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_627">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="dairy_details" Type="Self.dairy_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="dairy_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_644">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="assignment_details" Type="Self.assignment_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="assignment_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_657">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="leaverequest" Type="Self.leaverequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="leaverequest">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_660">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="teacher_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_665">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="Achievement_details" Type="Self.Achievement_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="Achievement_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_668">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_671">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="student_details" Type="Self.student_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="student_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_676">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="subject_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_679">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="Achievement_details" Type="Self.Achievement_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="Achievement_details">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_682">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="dairy_details" Type="Self.dairy_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="dairy_details">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_685">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="dairy_details" Type="Self.dairy_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="dairy_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_688">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="assignment_details" Type="Self.assignment_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="assignment_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_691">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="assignment_details" Type="Self.assignment_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="assignment_details">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_699">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="exam_results" Type="Self.exam_results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="exam_results">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_702">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="exam_results" Type="Self.exam_results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="exam_results">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_705">
+    <End Role="exam_details" Type="Self.exam_details" Multiplicity="1" />
+    <End Role="exam_results" Type="Self.exam_results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="exam_details">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="exam_results">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_744">
+    <End Role="Section" Type="Self.Section" Multiplicity="1" />
+    <End Role="class_details" Type="Self.class_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="class_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="teacher_id">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="0..1" />
+    <End Role="class_details" Type="Self.class_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="class_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="edujinniModelStoreContainer">
+    <EntitySet Name="Achievement_details" EntityType="Self.Achievement_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Admin_details" EntityType="Self.Admin_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="assignment_details" EntityType="Self.assignment_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="attendence_details" EntityType="Self.attendence_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="class_details" EntityType="Self.class_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="dairy_details" EntityType="Self.dairy_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="event_details" EntityType="Self.event_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exam_details" EntityType="Self.exam_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="exam_results" EntityType="Self.exam_results" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="examclass_details" EntityType="Self.examclass_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="examsubject_details" EntityType="Self.examsubject_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="guest_signup" EntityType="Self.guest_signup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="leaverequest" EntityType="Self.leaverequest" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="school_details" EntityType="Self.school_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Section" EntityType="Self.Section" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="student_details" EntityType="Self.student_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="subject_details" EntityType="Self.subject_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="syllabus_details" EntityType="Self.syllabus_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="teacher_details" EntityType="Self.teacher_details" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="timetable_details" EntityType="Self.timetable_details" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__Achieveme__class__4C364F0E" Association="Self.FK__Achieveme__class__4C364F0E">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="Achievement_details" EntitySet="Achievement_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Achieveme__secti__44952D46" Association="Self.FK__Achieveme__secti__44952D46">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="Achievement_details" EntitySet="Achievement_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__attendenc__secti__4589517F" Association="Self.FK__attendenc__secti__4589517F">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="attendence_details" EntitySet="attendence_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__class_det__schoo__3FD07829" Association="Self.FK__class_det__schoo__3FD07829">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="class_details" EntitySet="class_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__event_det__class__477199F1" Association="Self.FK__event_det__class__477199F1">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="event_details" EntitySet="event_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__event_det__secti__467D75B8" Association="Self.FK__event_det__secti__467D75B8">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="event_details" EntitySet="event_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examsubje__class__4959E263" Association="Self.FK__examsubje__class__4959E263">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examsubje__exam___4A4E069C" Association="Self.FK__examsubje__exam___4A4E069C">
+      <End Role="exam_details" EntitySet="exam_details" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examsubje__examc__4B422AD5" Association="Self.FK__examsubje__examc__4B422AD5">
+      <End Role="examclass_details" EntitySet="examclass_details" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examsubje__secti__4865BE2A" Association="Self.FK__examsubje__secti__4865BE2A">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section__school___2F9A1060" Association="Self.FK__Section__school___2F9A1060">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="Section" EntitySet="Section" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student_d__class__43A1090D" Association="Self.FK__student_d__class__43A1090D">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="student_details" EntitySet="student_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student_d__secti__42ACE4D4" Association="Self.FK__student_d__secti__42ACE4D4">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="student_details" EntitySet="student_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__subject_d__secti__40C49C62" Association="Self.FK__subject_d__secti__40C49C62">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="subject_details" EntitySet="subject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__timetable__secti__41B8C09B" Association="Self.FK__timetable__secti__41B8C09B">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_355" Association="Self.FK_355">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="subject_details" EntitySet="subject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_437" Association="Self.FK_437">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="Admin_details" EntitySet="Admin_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_482" Association="Self.FK_482">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="attendence_details" EntitySet="attendence_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_485" Association="Self.FK_485">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="attendence_details" EntitySet="attendence_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_492" Association="Self.FK_492">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="attendence_details" EntitySet="attendence_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_504" Association="Self.FK_504">
+      <End Role="subject_details" EntitySet="subject_details" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_507" Association="Self.FK_507">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_510" Association="Self.FK_510">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_523" Association="Self.FK_523">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="event_details" EntitySet="event_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_545" Association="Self.FK_545">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="subject_details" EntitySet="subject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_558" Association="Self.FK_558">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="exam_details" EntitySet="exam_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_573" Association="Self.FK_573">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="examclass_details" EntitySet="examclass_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_595" Association="Self.FK_595">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_610" Association="Self.FK_610">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="syllabus_details" EntitySet="syllabus_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_627" Association="Self.FK_627">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="dairy_details" EntitySet="dairy_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_644" Association="Self.FK_644">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="assignment_details" EntitySet="assignment_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_657" Association="Self.FK_657">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="leaverequest" EntitySet="leaverequest" />
+    </AssociationSet>
+    <AssociationSet Name="FK_660" Association="Self.FK_660">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="teacher_details" EntitySet="teacher_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_665" Association="Self.FK_665">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="Achievement_details" EntitySet="Achievement_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_668" Association="Self.FK_668">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_671" Association="Self.FK_671">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="student_details" EntitySet="student_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_676" Association="Self.FK_676">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="subject_details" EntitySet="subject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_679" Association="Self.FK_679">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="Achievement_details" EntitySet="Achievement_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_682" Association="Self.FK_682">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="dairy_details" EntitySet="dairy_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_685" Association="Self.FK_685">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="dairy_details" EntitySet="dairy_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_688" Association="Self.FK_688">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="assignment_details" EntitySet="assignment_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_691" Association="Self.FK_691">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="assignment_details" EntitySet="assignment_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_699" Association="Self.FK_699">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="exam_results" EntitySet="exam_results" />
+    </AssociationSet>
+    <AssociationSet Name="FK_702" Association="Self.FK_702">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="exam_results" EntitySet="exam_results" />
+    </AssociationSet>
+    <AssociationSet Name="FK_705" Association="Self.FK_705">
+      <End Role="exam_details" EntitySet="exam_details" />
+      <End Role="exam_results" EntitySet="exam_results" />
+    </AssociationSet>
+    <AssociationSet Name="FK_744" Association="Self.FK_744">
+      <End Role="Section" EntitySet="Section" />
+      <End Role="class_details" EntitySet="class_details" />
+    </AssociationSet>
+    <AssociationSet Name="teacher_id" Association="Self.teacher_id">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="class_details" EntitySet="class_details" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

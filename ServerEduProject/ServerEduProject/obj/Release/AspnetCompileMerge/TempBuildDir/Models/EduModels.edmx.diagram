@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="78ee2f1f478946099ca570d5625ab972" Name="Diagram1" ZoomLevel="98">
+        <EntityTypeShape EntityType="edujinniModel.Achievement_details" Width="1.5" PointX="5.25" PointY="56.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.Admin_details" Width="1.5" PointX="3" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.assignment_details" Width="1.5" PointX="5.25" PointY="62.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.attendence_details" Width="1.5" PointX="8.25" PointY="56.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.class_details" Width="1.5" PointX="5.25" PointY="75.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.dairy_details" Width="1.5" PointX="8.25" PointY="64.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.event_details" Width="1.5" PointX="3" PointY="43.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.exam_details" Width="1.5" PointX="3" PointY="47.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.exam_results" Width="1.5" PointX="5.25" PointY="68.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.examclass_details" Width="1.5" PointX="3" PointY="51.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.examsubject_details" Width="1.5" PointX="3" PointY="55.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.guest_signup" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.leaverequest" Width="1.5" PointX="3" PointY="60.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.school_details" Width="1.5" PointX="0.625" PointY="39" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.Section" Width="1.5" PointX="3" PointY="65.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.student_details" Width="1.5" PointX="1.375" PointY="68.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.subject_details" Width="1.5" PointX="10.5" PointY="66" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.syllabus_details" Width="1.5" PointX="3" PointY="77.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.teacher_details" Width="1.5" PointX="3" PointY="81.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="edujinniModel.timetable_details" Width="1.5" PointX="12.75" PointY="62.75" IsExpanded="true" />
+        <AssociationConnector Association="edujinniModel.FK_665" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_679" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_437" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_644" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_688" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_691" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_482" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_485" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_492" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_510" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_545" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_744" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.teacher_id" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_627" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_682" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_685" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_523" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_558" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_705" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_699" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_702" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_573" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_595" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_657" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK__Section__school___2F9A1060" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_355" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_610" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_660" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_668" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_671" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_504" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_676" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK_507" ManuallyRouted="false" />
+        <AssociationConnector Association="edujinniModel.FK__class_det__schoo__3FD07829" />
+        <AssociationConnector Association="edujinniModel.FK__Achieveme__class__4C364F0E" />
+        <AssociationConnector Association="edujinniModel.FK__Achieveme__secti__44952D46" />
+        <AssociationConnector Association="edujinniModel.FK__attendenc__secti__4589517F" />
+        <AssociationConnector Association="edujinniModel.FK__event_det__class__477199F1" />
+        <AssociationConnector Association="edujinniModel.FK__examsubje__class__4959E263" />
+        <AssociationConnector Association="edujinniModel.FK__student_d__class__43A1090D" />
+        <AssociationConnector Association="edujinniModel.FK__event_det__secti__467D75B8" />
+        <AssociationConnector Association="edujinniModel.FK__examsubje__exam___4A4E069C" />
+        <AssociationConnector Association="edujinniModel.FK__examsubje__examc__4B422AD5" />
+        <AssociationConnector Association="edujinniModel.FK__examsubje__secti__4865BE2A" />
+        <AssociationConnector Association="edujinniModel.FK__student_d__secti__42ACE4D4" />
+        <AssociationConnector Association="edujinniModel.FK__subject_d__secti__40C49C62" />
+        <AssociationConnector Association="edujinniModel.FK__timetable__secti__41B8C09B" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

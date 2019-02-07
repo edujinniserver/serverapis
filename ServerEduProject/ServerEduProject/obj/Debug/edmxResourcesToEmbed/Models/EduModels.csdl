@@ -1,0 +1,1315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="edujinniModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Achievement_details">
+    <Key>
+      <PropertyRef Name="achievement_id" />
+    </Key>
+    <Property Name="achievement_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="achievement_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="achievement_description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="achievement_section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="achievement_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="achievement_student_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_665" FromRole="Achievement_details" ToRole="school_details" />
+    <NavigationProperty Name="student_details" Relationship="Self.FK_679" FromRole="Achievement_details" ToRole="student_details" />
+    <Property Name="section_id" Type="Int32" />
+    <Property Name="class_id" Type="Int32" />
+    <NavigationProperty Name="class_details" Relationship="edujinniModel.FK__Achieveme__class__4C364F0E" FromRole="Achievement_details" ToRole="class_details" />
+    <NavigationProperty Name="Section" Relationship="edujinniModel.FK__Achieveme__secti__44952D46" FromRole="Achievement_details" ToRole="Section" />
+  </EntityType>
+  <EntityType Name="Admin_details">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile_no" Type="Int64" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dateof_birth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="flat_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="street1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="pincode" Type="Int32" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="admin_image" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_437" FromRole="Admin_details" ToRole="school_details" />
+  </EntityType>
+  <EntityType Name="assignment_details">
+    <Key>
+      <PropertyRef Name="assignment_id" />
+    </Key>
+    <Property Name="assignment_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="assignment_class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="assignment_section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="assignment_subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="assignment_enter_topic" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="assignment_from_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="assignment_to_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="assignment_related_test" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="teacher_id" Type="Int32" Nullable="false" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_644" FromRole="assignment_details" ToRole="school_details" />
+    <NavigationProperty Name="teacher_details" Relationship="Self.FK_688" FromRole="assignment_details" ToRole="teacher_details" />
+    <NavigationProperty Name="student_details" Relationship="Self.FK_691" FromRole="assignment_details" ToRole="student_details" />
+  </EntityType>
+  <EntityType Name="attendence_details">
+    <Key>
+      <PropertyRef Name="attendence_id" />
+    </Key>
+    <Property Name="attendence_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="class_id" Type="Int32" Nullable="false" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="attendence_section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="attendence_setion" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="attendence_roll_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="attendence_parent_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="attendence_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="class_details" Relationship="Self.FK_482" FromRole="attendence_details" ToRole="class_details" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_485" FromRole="attendence_details" ToRole="school_details" />
+    <NavigationProperty Name="student_details" Relationship="Self.FK_492" FromRole="attendence_details" ToRole="student_details" />
+    <Property Name="section_id" Type="Int32" />
+    <Property Name="attendence_posted_by" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Section" Relationship="edujinniModel.FK__attendenc__secti__4589517F" FromRole="attendence_details" ToRole="Section" />
+  </EntityType>
+  <EntityType Name="class_details">
+    <Key>
+      <PropertyRef Name="class_id" />
+    </Key>
+    <Property Name="class_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="class_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="class_section_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="section_id" Type="Int32" Nullable="false" />
+    <Property Name="teacher_id" Type="Int32" />
+    <NavigationProperty Name="attendence_details" Relationship="Self.FK_482" FromRole="class_details" ToRole="attendence_details" />
+    <NavigationProperty Name="timetable_details" Relationship="Self.FK_510" FromRole="class_details" ToRole="timetable_details" />
+    <NavigationProperty Name="subject_details" Relationship="Self.FK_545" FromRole="class_details" ToRole="subject_details" />
+    <NavigationProperty Name="Section" Relationship="Self.FK_744" FromRole="class_details" ToRole="Section" />
+    <NavigationProperty Name="teacher_details" Relationship="Self.teacher_id" FromRole="class_details" ToRole="teacher_details" />
+    <Property Name="school_id" Type="Int32" />
+    <NavigationProperty Name="school_details" Relationship="edujinniModel.FK__class_det__schoo__3FD07829" FromRole="class_details" ToRole="school_details" />
+    <NavigationProperty Name="Achievement_details" Relationship="edujinniModel.FK__Achieveme__class__4C364F0E" FromRole="class_details" ToRole="Achievement_details" />
+    <NavigationProperty Name="event_details" Relationship="edujinniModel.FK__event_det__class__477199F1" FromRole="class_details" ToRole="event_details" />
+    <NavigationProperty Name="examsubject_details" Relationship="edujinniModel.FK__examsubje__class__4959E263" FromRole="class_details" ToRole="examsubject_details" />
+    <NavigationProperty Name="student_details" Relationship="edujinniModel.FK__student_d__class__43A1090D" FromRole="class_details" ToRole="student_details" />
+  </EntityType>
+  <EntityType Name="dairy_details">
+    <Key>
+      <PropertyRef Name="dairy_id" />
+    </Key>
+    <Property Name="dairy_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="dairy_class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dairy_section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dairy_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="dairy_subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dairy_units" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dairy_todays_work" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="dairy_todays_homework" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="teacher_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_627" FromRole="dairy_details" ToRole="school_details" />
+    <NavigationProperty Name="student_details" Relationship="Self.FK_682" FromRole="dairy_details" ToRole="student_details" />
+    <NavigationProperty Name="teacher_details" Relationship="Self.FK_685" FromRole="dairy_details" ToRole="teacher_details" />
+  </EntityType>
+  <EntityType Name="event_details">
+    <Key>
+      <PropertyRef Name="event_id" />
+    </Key>
+    <Property Name="event_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="event_image" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="event_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="event_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="event_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_523" FromRole="event_details" ToRole="school_details" />
+    <Property Name="section_id" Type="Int32" />
+    <Property Name="class_id" Type="Int32" />
+    <NavigationProperty Name="class_details" Relationship="edujinniModel.FK__event_det__class__477199F1" FromRole="event_details" ToRole="class_details" />
+    <NavigationProperty Name="Section" Relationship="edujinniModel.FK__event_det__secti__467D75B8" FromRole="event_details" ToRole="Section" />
+  </EntityType>
+  <EntityType Name="exam_details">
+    <Key>
+      <PropertyRef Name="exam_id" />
+    </Key>
+    <Property Name="exam_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="exam_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="exam_start_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="exam_end_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_558" FromRole="exam_details" ToRole="school_details" />
+    <NavigationProperty Name="exam_results" Relationship="Self.FK_705" FromRole="exam_details" ToRole="exam_results" />
+    <NavigationProperty Name="examsubject_details" Relationship="edujinniModel.FK__examsubje__exam___4A4E069C" FromRole="exam_details" ToRole="examsubject_details" />
+  </EntityType>
+  <EntityType Name="exam_results">
+    <Key>
+      <PropertyRef Name="examresult_id" />
+    </Key>
+    <Property Name="examresult_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="teacher_id" Type="Int32" Nullable="false" />
+    <Property Name="student_id" Type="Int32" Nullable="false" />
+    <Property Name="exam_id" Type="Int32" Nullable="false" />
+    <Property Name="examresult_marks" Type="Int32" Nullable="false" />
+    <Property Name="examresult_total_marks" Type="Int32" Nullable="false" />
+    <Property Name="examresult_subjects" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="examresult_unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="exam_details" Relationship="Self.FK_705" FromRole="exam_results" ToRole="exam_details" />
+    <NavigationProperty Name="teacher_details" Relationship="Self.FK_699" FromRole="exam_results" ToRole="teacher_details" />
+    <NavigationProperty Name="student_details" Relationship="Self.FK_702" FromRole="exam_results" ToRole="student_details" />
+    <Property Name="school_id" Type="Int32" />
+    <NavigationProperty Name="school_details" Relationship="edujinniModel.FK__exam_resu__schoo__4E1E9780" FromRole="exam_results" ToRole="school_details" />
+  </EntityType>
+  <EntityType Name="examclass_details">
+    <Key>
+      <PropertyRef Name="examclass_id" />
+    </Key>
+    <Property Name="examclass_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="examclass_class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="examclass_section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="examclass_exam_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="examclass_start_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="examclass_end_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_573" FromRole="examclass_details" ToRole="school_details" />
+    <NavigationProperty Name="examsubject_details" Relationship="edujinniModel.FK__examsubje__examc__4B422AD5" FromRole="examclass_details" ToRole="examsubject_details" />
+    <Property Name="section_id" Type="Int32" />
+    <NavigationProperty Name="Section" Relationship="edujinniModel.FK__examclass__secti__4D2A7347" FromRole="examclass_details" ToRole="Section" />
+    <Property Name="class_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="examsubject_details">
+    <Key>
+      <PropertyRef Name="examsubject_id" />
+    </Key>
+    <Property Name="examsubject_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="examsubject_class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="examsubject_section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="examsubject_subject_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="examsubject_subject_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="examsubject_marks" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="examsubject_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="examsubject_start_time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="examsubject_end_time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_595" FromRole="examsubject_details" ToRole="school_details" />
+    <Property Name="section_id" Type="Int32" />
+    <Property Name="class_id" Type="Int32" />
+    <Property Name="exam_id" Type="Int32" />
+    <Property Name="examclass_id" Type="Int32" />
+    <Property Name="examsubject_syllabus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="class_details" Relationship="edujinniModel.FK__examsubje__class__4959E263" FromRole="examsubject_details" ToRole="class_details" />
+    <NavigationProperty Name="exam_details" Relationship="edujinniModel.FK__examsubje__exam___4A4E069C" FromRole="examsubject_details" ToRole="exam_details" />
+    <NavigationProperty Name="examclass_details" Relationship="edujinniModel.FK__examsubje__examc__4B422AD5" FromRole="examsubject_details" ToRole="examclass_details" />
+    <NavigationProperty Name="Section" Relationship="edujinniModel.FK__examsubje__secti__4865BE2A" FromRole="examsubject_details" ToRole="Section" />
+  </EntityType>
+  <EntityType Name="guest_signup">
+    <Key>
+      <PropertyRef Name="guest_id" />
+    </Key>
+    <Property Name="guest_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mobile_no" Type="Int64" Nullable="false" />
+    <Property Name="dateof_birth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="create_pswd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="confirm_pswd" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="leaverequest">
+    <Key>
+      <PropertyRef Name="leaverequest_id" />
+    </Key>
+    <Property Name="leaverequest_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="leaverequest_from_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="leaverequest_to_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="leaverequest_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="leaverequest_requested_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="leaverequest_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="leaverequest_aproved_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_657" FromRole="leaverequest" ToRole="school_details" />
+  </EntityType>
+  <EntityType Name="school_details">
+    <Key>
+      <PropertyRef Name="school_id" />
+    </Key>
+    <Property Name="school_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="school_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="school_flat_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="school_street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="school_area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="school_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="school_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="school_pincode" Type="Int32" Nullable="false" />
+    <Property Name="school_phone_no" Type="Int64" Nullable="false" />
+    <Property Name="school_reg_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="school_image" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="update_date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Achievement_details" Relationship="Self.FK_665" FromRole="school_details" ToRole="Achievement_details" />
+    <NavigationProperty Name="Admin_details" Relationship="Self.FK_437" FromRole="school_details" ToRole="Admin_details" />
+    <NavigationProperty Name="assignment_details" Relationship="Self.FK_644" FromRole="school_details" ToRole="assignment_details" />
+    <NavigationProperty Name="attendence_details" Relationship="Self.FK_485" FromRole="school_details" ToRole="attendence_details" />
+    <NavigationProperty Name="dairy_details" Relationship="Self.FK_627" FromRole="school_details" ToRole="dairy_details" />
+    <NavigationProperty Name="event_details" Relationship="Self.FK_523" FromRole="school_details" ToRole="event_details" />
+    <NavigationProperty Name="exam_details" Relationship="Self.FK_558" FromRole="school_details" ToRole="exam_details" />
+    <NavigationProperty Name="examclass_details" Relationship="Self.FK_573" FromRole="school_details" ToRole="examclass_details" />
+    <NavigationProperty Name="examsubject_details" Relationship="Self.FK_595" FromRole="school_details" ToRole="examsubject_details" />
+    <NavigationProperty Name="leaverequests" Relationship="Self.FK_657" FromRole="school_details" ToRole="leaverequest" />
+    <NavigationProperty Name="Sections" Relationship="Self.FK__Section__school___2F9A1060" FromRole="school_details" ToRole="Section" />
+    <NavigationProperty Name="subject_details" Relationship="Self.FK_355" FromRole="school_details" ToRole="subject_details" />
+    <NavigationProperty Name="syllabus_details" Relationship="Self.FK_610" FromRole="school_details" ToRole="syllabus_details" />
+    <NavigationProperty Name="teacher_details" Relationship="Self.FK_660" FromRole="school_details" ToRole="teacher_details" />
+    <NavigationProperty Name="timetable_details" Relationship="Self.FK_668" FromRole="school_details" ToRole="timetable_details" />
+    <NavigationProperty Name="student_details" Relationship="Self.FK_671" FromRole="school_details" ToRole="student_details" />
+    <Property Name="admin_full_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin_mobile_no" Type="Int64" />
+    <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin_image" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="class_details" Relationship="edujinniModel.FK__class_det__schoo__3FD07829" FromRole="school_details" ToRole="class_details" />
+    <NavigationProperty Name="exam_results" Relationship="edujinniModel.FK__exam_resu__schoo__4E1E9780" FromRole="school_details" ToRole="exam_results" />
+  </EntityType>
+  <EntityType Name="Section">
+    <Key>
+      <PropertyRef Name="section_id" />
+    </Key>
+    <Property Name="section_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="section_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" />
+    <NavigationProperty Name="class_details" Relationship="Self.FK_744" FromRole="Section" ToRole="class_details" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK__Section__school___2F9A1060" FromRole="Section" ToRole="school_details" />
+    <NavigationProperty Name="Achievement_details" Relationship="edujinniModel.FK__Achieveme__secti__44952D46" FromRole="Section" ToRole="Achievement_details" />
+    <NavigationProperty Name="attendence_details" Relationship="edujinniModel.FK__attendenc__secti__4589517F" FromRole="Section" ToRole="attendence_details" />
+    <NavigationProperty Name="event_details" Relationship="edujinniModel.FK__event_det__secti__467D75B8" FromRole="Section" ToRole="event_details" />
+    <NavigationProperty Name="examsubject_details" Relationship="edujinniModel.FK__examsubje__secti__4865BE2A" FromRole="Section" ToRole="examsubject_details" />
+    <NavigationProperty Name="student_details" Relationship="edujinniModel.FK__student_d__secti__42ACE4D4" FromRole="Section" ToRole="student_details" />
+    <NavigationProperty Name="subject_details" Relationship="edujinniModel.FK__subject_d__secti__40C49C62" FromRole="Section" ToRole="subject_details" />
+    <NavigationProperty Name="timetable_details" Relationship="edujinniModel.FK__timetable__secti__41B8C09B" FromRole="Section" ToRole="timetable_details" />
+    <NavigationProperty Name="examclass_details" Relationship="edujinniModel.FK__examclass__secti__4D2A7347" FromRole="Section" ToRole="examclass_details" />
+  </EntityType>
+  <EntityType Name="student_details">
+    <Key>
+      <PropertyRef Name="student_id" />
+    </Key>
+    <Property Name="student_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="student_image" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+    <Property Name="student_section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="student_first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_roll_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_chiled_no" Type="Int32" />
+    <Property Name="student_dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="student_gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_father_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_father_mobile_no" Type="Int64" Nullable="false" />
+    <Property Name="student_father_occupation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_mother_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_mother_mobile_no" Type="Int64" />
+    <Property Name="student_mother_occupation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="student_no_of_siblings" Type="Int32" />
+    <Property Name="student_flat_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="student_buliding_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="student_street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="student_street1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="student_area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="student_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_pincode" Type="Int32" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="student_admission_date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="Student_status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="student_class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Achievement_details" Relationship="Self.FK_679" FromRole="student_details" ToRole="Achievement_details" />
+    <NavigationProperty Name="assignment_details" Relationship="Self.FK_691" FromRole="student_details" ToRole="assignment_details" />
+    <NavigationProperty Name="attendence_details" Relationship="Self.FK_492" FromRole="student_details" ToRole="attendence_details" />
+    <NavigationProperty Name="dairy_details" Relationship="Self.FK_682" FromRole="student_details" ToRole="dairy_details" />
+    <NavigationProperty Name="exam_results" Relationship="Self.FK_702" FromRole="student_details" ToRole="exam_results" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_671" FromRole="student_details" ToRole="school_details" />
+    <Property Name="section_id" Type="Int32" />
+    <Property Name="class_id" Type="Int32" />
+    <Property Name="student_admission_id" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="student_password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="parent_password" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="class_details" Relationship="edujinniModel.FK__student_d__class__43A1090D" FromRole="student_details" ToRole="class_details" />
+    <NavigationProperty Name="Section" Relationship="edujinniModel.FK__student_d__secti__42ACE4D4" FromRole="student_details" ToRole="Section" />
+  </EntityType>
+  <EntityType Name="subject_details">
+    <Key>
+      <PropertyRef Name="subject_id" />
+    </Key>
+    <Property Name="subject_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subject_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subject_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="class_id" Type="Int32" Nullable="false" />
+    <Property Name="teacher_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="class_details" Relationship="Self.FK_545" FromRole="subject_details" ToRole="class_details" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_355" FromRole="subject_details" ToRole="school_details" />
+    <NavigationProperty Name="timetable_details" Relationship="Self.FK_504" FromRole="subject_details" ToRole="timetable_details" />
+    <NavigationProperty Name="teacher_details" Relationship="Self.FK_676" FromRole="subject_details" ToRole="teacher_details" />
+    <Property Name="section_id" Type="Int32" />
+    <NavigationProperty Name="Section1" Relationship="edujinniModel.FK__subject_d__secti__40C49C62" FromRole="subject_details" ToRole="Section" />
+  </EntityType>
+  <EntityType Name="syllabus_details">
+    <Key>
+      <PropertyRef Name="syllabus_id" />
+    </Key>
+    <Property Name="syllabus_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="syllabus_class" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="syllabus_subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="syllabus_unit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="syllabus_subunit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="syllabus_topic" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_610" FromRole="syllabus_details" ToRole="school_details" />
+  </EntityType>
+  <EntityType Name="teacher_details">
+    <Key>
+      <PropertyRef Name="teacher_id" />
+    </Key>
+    <Property Name="teacher_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="teacher_image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="teacher_first_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_last_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="teacher_phone_no" Type="Int64" Nullable="false" />
+    <Property Name="teacher_dob" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="teacher_gender" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_subject1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_subject2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="teacher_qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_department" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_flat_no" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="teacher_street" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="teacher_area" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="teacher_city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="teacher_pincode" Type="Int32" Nullable="false" />
+    <Property Name="teacher_date_of_joining" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="class_id" Type="Int32" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <Property Name="teacher_teacherid" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="teacher_buildingname" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="teacher_street1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="assignment_details" Relationship="Self.FK_688" FromRole="teacher_details" ToRole="assignment_details" />
+    <NavigationProperty Name="class_details" Relationship="Self.teacher_id" FromRole="teacher_details" ToRole="class_details" />
+    <NavigationProperty Name="dairy_details" Relationship="Self.FK_685" FromRole="teacher_details" ToRole="dairy_details" />
+    <NavigationProperty Name="exam_results" Relationship="Self.FK_699" FromRole="teacher_details" ToRole="exam_results" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_660" FromRole="teacher_details" ToRole="school_details" />
+    <NavigationProperty Name="subject_details" Relationship="Self.FK_676" FromRole="teacher_details" ToRole="subject_details" />
+    <NavigationProperty Name="timetable_details" Relationship="Self.FK_507" FromRole="teacher_details" ToRole="timetable_details" />
+    <Property Name="teacher_status" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="timetable_details">
+    <Key>
+      <PropertyRef Name="timetable_id" />
+    </Key>
+    <Property Name="timetable_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="timetable_day" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="subject_id" Type="Int32" Nullable="false" />
+    <Property Name="teacher_id" Type="Int32" Nullable="false" />
+    <Property Name="class_id" Type="Int32" Nullable="false" />
+    <Property Name="timetable_section" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="timetable_start_time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="timetable_end_time" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="insert_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="insert_date" Type="DateTime" Precision="0" />
+    <Property Name="update_by" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="update_date" Type="DateTime" Precision="0" />
+    <Property Name="school_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="class_details" Relationship="Self.FK_510" FromRole="timetable_details" ToRole="class_details" />
+    <NavigationProperty Name="school_details" Relationship="Self.FK_668" FromRole="timetable_details" ToRole="school_details" />
+    <NavigationProperty Name="subject_details" Relationship="Self.FK_504" FromRole="timetable_details" ToRole="subject_details" />
+    <NavigationProperty Name="teacher_details" Relationship="Self.FK_507" FromRole="timetable_details" ToRole="teacher_details" />
+    <Property Name="section_id" Type="Int32" />
+    <NavigationProperty Name="Section" Relationship="edujinniModel.FK__timetable__secti__41B8C09B" FromRole="timetable_details" ToRole="Section" />
+  </EntityType>
+  <Association Name="FK_665">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="Achievement_details" Type="Self.Achievement_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="Achievement_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_679">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="Achievement_details" Type="Self.Achievement_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="Achievement_details">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_437">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="Admin_details" Type="Self.Admin_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="Admin_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_644">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="assignment_details" Type="Self.assignment_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="assignment_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_688">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="assignment_details" Type="Self.assignment_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="assignment_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_691">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="assignment_details" Type="Self.assignment_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="assignment_details">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_482">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="1" />
+    <End Role="attendence_details" Type="Self.attendence_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="attendence_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_485">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="attendence_details" Type="Self.attendence_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="attendence_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_492">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="attendence_details" Type="Self.attendence_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="attendence_details">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_510">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_545">
+    <End Role="class_details" Type="Self.class_details" Multiplicity="1" />
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="subject_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_744">
+    <End Role="Section" Type="Self.Section" Multiplicity="1" />
+    <End Role="class_details" Type="Self.class_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="class_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="teacher_id">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="0..1" />
+    <End Role="class_details" Type="Self.class_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="class_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_627">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="dairy_details" Type="Self.dairy_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="dairy_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_682">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="dairy_details" Type="Self.dairy_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="dairy_details">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_685">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="dairy_details" Type="Self.dairy_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="dairy_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_523">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="event_details" Type="Self.event_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="event_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_558">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="exam_details" Type="Self.exam_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="exam_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_705">
+    <End Role="exam_details" Type="Self.exam_details" Multiplicity="1" />
+    <End Role="exam_results" Type="Self.exam_results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="exam_details">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="exam_results">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_699">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="exam_results" Type="Self.exam_results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="exam_results">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_702">
+    <End Role="student_details" Type="Self.student_details" Multiplicity="1" />
+    <End Role="exam_results" Type="Self.exam_results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="student_details">
+        <PropertyRef Name="student_id" />
+      </Principal>
+      <Dependent Role="exam_results">
+        <PropertyRef Name="student_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_573">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="examclass_details" Type="Self.examclass_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="examclass_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_595">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="examsubject_details" Type="Self.examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_657">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="leaverequest" Type="Self.leaverequest" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="leaverequest">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Section__school___2F9A1060">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="0..1" />
+    <End Role="Section" Type="Self.Section" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="Section">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_355">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="subject_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_610">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="syllabus_details" Type="Self.syllabus_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="syllabus_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_660">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="teacher_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_668">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_671">
+    <End Role="school_details" Type="Self.school_details" Multiplicity="1" />
+    <End Role="student_details" Type="Self.student_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="student_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_504">
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subject_details">
+        <PropertyRef Name="subject_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="subject_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_676">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="subject_details" Type="Self.subject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="subject_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_507">
+    <End Role="teacher_details" Type="Self.teacher_details" Multiplicity="1" />
+    <End Role="timetable_details" Type="Self.timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="teacher_details">
+        <PropertyRef Name="teacher_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="teacher_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EdujinniEntity" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Achievement_details" EntityType="Self.Achievement_details" />
+    <EntitySet Name="Admin_details" EntityType="Self.Admin_details" />
+    <EntitySet Name="assignment_details" EntityType="Self.assignment_details" />
+    <EntitySet Name="attendence_details" EntityType="Self.attendence_details" />
+    <EntitySet Name="class_details" EntityType="Self.class_details" />
+    <EntitySet Name="dairy_details" EntityType="Self.dairy_details" />
+    <EntitySet Name="event_details" EntityType="Self.event_details" />
+    <EntitySet Name="exam_details" EntityType="Self.exam_details" />
+    <EntitySet Name="exam_results" EntityType="Self.exam_results" />
+    <EntitySet Name="examclass_details" EntityType="Self.examclass_details" />
+    <EntitySet Name="examsubject_details" EntityType="Self.examsubject_details" />
+    <EntitySet Name="guest_signup" EntityType="Self.guest_signup" />
+    <EntitySet Name="leaverequests" EntityType="Self.leaverequest" />
+    <EntitySet Name="school_details" EntityType="Self.school_details" />
+    <EntitySet Name="Sections" EntityType="Self.Section" />
+    <EntitySet Name="student_details" EntityType="Self.student_details" />
+    <EntitySet Name="subject_details" EntityType="Self.subject_details" />
+    <EntitySet Name="syllabus_details" EntityType="Self.syllabus_details" />
+    <EntitySet Name="teacher_details" EntityType="Self.teacher_details" />
+    <EntitySet Name="timetable_details" EntityType="Self.timetable_details" />
+    <AssociationSet Name="FK_665" Association="Self.FK_665">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="Achievement_details" EntitySet="Achievement_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_679" Association="Self.FK_679">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="Achievement_details" EntitySet="Achievement_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_437" Association="Self.FK_437">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="Admin_details" EntitySet="Admin_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_644" Association="Self.FK_644">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="assignment_details" EntitySet="assignment_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_688" Association="Self.FK_688">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="assignment_details" EntitySet="assignment_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_691" Association="Self.FK_691">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="assignment_details" EntitySet="assignment_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_482" Association="Self.FK_482">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="attendence_details" EntitySet="attendence_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_485" Association="Self.FK_485">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="attendence_details" EntitySet="attendence_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_492" Association="Self.FK_492">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="attendence_details" EntitySet="attendence_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_510" Association="Self.FK_510">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_545" Association="Self.FK_545">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="subject_details" EntitySet="subject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_744" Association="Self.FK_744">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="class_details" EntitySet="class_details" />
+    </AssociationSet>
+    <AssociationSet Name="teacher_id" Association="Self.teacher_id">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="class_details" EntitySet="class_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_627" Association="Self.FK_627">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="dairy_details" EntitySet="dairy_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_682" Association="Self.FK_682">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="dairy_details" EntitySet="dairy_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_685" Association="Self.FK_685">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="dairy_details" EntitySet="dairy_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_523" Association="Self.FK_523">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="event_details" EntitySet="event_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_558" Association="Self.FK_558">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="exam_details" EntitySet="exam_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_705" Association="Self.FK_705">
+      <End Role="exam_details" EntitySet="exam_details" />
+      <End Role="exam_results" EntitySet="exam_results" />
+    </AssociationSet>
+    <AssociationSet Name="FK_699" Association="Self.FK_699">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="exam_results" EntitySet="exam_results" />
+    </AssociationSet>
+    <AssociationSet Name="FK_702" Association="Self.FK_702">
+      <End Role="student_details" EntitySet="student_details" />
+      <End Role="exam_results" EntitySet="exam_results" />
+    </AssociationSet>
+    <AssociationSet Name="FK_573" Association="Self.FK_573">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="examclass_details" EntitySet="examclass_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_595" Association="Self.FK_595">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_657" Association="Self.FK_657">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="leaverequest" EntitySet="leaverequests" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Section__school___2F9A1060" Association="Self.FK__Section__school___2F9A1060">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="Section" EntitySet="Sections" />
+    </AssociationSet>
+    <AssociationSet Name="FK_355" Association="Self.FK_355">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="subject_details" EntitySet="subject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_610" Association="Self.FK_610">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="syllabus_details" EntitySet="syllabus_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_660" Association="Self.FK_660">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="teacher_details" EntitySet="teacher_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_668" Association="Self.FK_668">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_671" Association="Self.FK_671">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="student_details" EntitySet="student_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_504" Association="Self.FK_504">
+      <End Role="subject_details" EntitySet="subject_details" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_676" Association="Self.FK_676">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="subject_details" EntitySet="subject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK_507" Association="Self.FK_507">
+      <End Role="teacher_details" EntitySet="teacher_details" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__class_det__schoo__3FD07829" Association="edujinniModel.FK__class_det__schoo__3FD07829">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="class_details" EntitySet="class_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Achieveme__class__4C364F0E" Association="edujinniModel.FK__Achieveme__class__4C364F0E">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="Achievement_details" EntitySet="Achievement_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Achieveme__secti__44952D46" Association="edujinniModel.FK__Achieveme__secti__44952D46">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="Achievement_details" EntitySet="Achievement_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__attendenc__secti__4589517F" Association="edujinniModel.FK__attendenc__secti__4589517F">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="attendence_details" EntitySet="attendence_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__event_det__class__477199F1" Association="edujinniModel.FK__event_det__class__477199F1">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="event_details" EntitySet="event_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examsubje__class__4959E263" Association="edujinniModel.FK__examsubje__class__4959E263">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student_d__class__43A1090D" Association="edujinniModel.FK__student_d__class__43A1090D">
+      <End Role="class_details" EntitySet="class_details" />
+      <End Role="student_details" EntitySet="student_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__event_det__secti__467D75B8" Association="edujinniModel.FK__event_det__secti__467D75B8">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="event_details" EntitySet="event_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examsubje__exam___4A4E069C" Association="edujinniModel.FK__examsubje__exam___4A4E069C">
+      <End Role="exam_details" EntitySet="exam_details" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examsubje__examc__4B422AD5" Association="edujinniModel.FK__examsubje__examc__4B422AD5">
+      <End Role="examclass_details" EntitySet="examclass_details" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examsubje__secti__4865BE2A" Association="edujinniModel.FK__examsubje__secti__4865BE2A">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="examsubject_details" EntitySet="examsubject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__student_d__secti__42ACE4D4" Association="edujinniModel.FK__student_d__secti__42ACE4D4">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="student_details" EntitySet="student_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__subject_d__secti__40C49C62" Association="edujinniModel.FK__subject_d__secti__40C49C62">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="subject_details" EntitySet="subject_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__timetable__secti__41B8C09B" Association="edujinniModel.FK__timetable__secti__41B8C09B">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="timetable_details" EntitySet="timetable_details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__exam_resu__schoo__4E1E9780" Association="edujinniModel.FK__exam_resu__schoo__4E1E9780">
+      <End Role="school_details" EntitySet="school_details" />
+      <End Role="exam_results" EntitySet="exam_results" />
+    </AssociationSet>
+    <AssociationSet Name="FK__examclass__secti__4D2A7347" Association="edujinniModel.FK__examclass__secti__4D2A7347">
+      <End Role="Section" EntitySet="Sections" />
+      <End Role="examclass_details" EntitySet="examclass_details" />
+    </AssociationSet>
+  </EntityContainer>
+  <Association Name="FK__class_det__schoo__3FD07829">
+    <End Type="edujinniModel.school_details" Role="school_details" Multiplicity="0..1" />
+    <End Type="edujinniModel.class_details" Role="class_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="class_details">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Achieveme__class__4C364F0E">
+    <End Type="edujinniModel.class_details" Role="class_details" Multiplicity="0..1" />
+    <End Type="edujinniModel.Achievement_details" Role="Achievement_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="Achievement_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Achieveme__secti__44952D46">
+    <End Type="edujinniModel.Section" Role="Section" Multiplicity="0..1" />
+    <End Type="edujinniModel.Achievement_details" Role="Achievement_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="Achievement_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__attendenc__secti__4589517F">
+    <End Type="edujinniModel.Section" Role="Section" Multiplicity="0..1" />
+    <End Type="edujinniModel.attendence_details" Role="attendence_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="attendence_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__event_det__class__477199F1">
+    <End Type="edujinniModel.class_details" Role="class_details" Multiplicity="0..1" />
+    <End Type="edujinniModel.event_details" Role="event_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="event_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examsubje__class__4959E263">
+    <End Type="edujinniModel.class_details" Role="class_details" Multiplicity="0..1" />
+    <End Type="edujinniModel.examsubject_details" Role="examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student_d__class__43A1090D">
+    <End Type="edujinniModel.class_details" Role="class_details" Multiplicity="0..1" />
+    <End Type="edujinniModel.student_details" Role="student_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="class_details">
+        <PropertyRef Name="class_id" />
+      </Principal>
+      <Dependent Role="student_details">
+        <PropertyRef Name="class_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__event_det__secti__467D75B8">
+    <End Type="edujinniModel.Section" Role="Section" Multiplicity="0..1" />
+    <End Type="edujinniModel.event_details" Role="event_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="event_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examsubje__exam___4A4E069C">
+    <End Type="edujinniModel.exam_details" Role="exam_details" Multiplicity="0..1" />
+    <End Type="edujinniModel.examsubject_details" Role="examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="exam_details">
+        <PropertyRef Name="exam_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="exam_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examsubje__examc__4B422AD5">
+    <End Type="edujinniModel.examclass_details" Role="examclass_details" Multiplicity="0..1" />
+    <End Type="edujinniModel.examsubject_details" Role="examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="examclass_details">
+        <PropertyRef Name="examclass_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="examclass_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examsubje__secti__4865BE2A">
+    <End Type="edujinniModel.Section" Role="Section" Multiplicity="0..1" />
+    <End Type="edujinniModel.examsubject_details" Role="examsubject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="examsubject_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__student_d__secti__42ACE4D4">
+    <End Type="edujinniModel.Section" Role="Section" Multiplicity="0..1" />
+    <End Type="edujinniModel.student_details" Role="student_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="student_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__subject_d__secti__40C49C62">
+    <End Type="edujinniModel.Section" Role="Section" Multiplicity="0..1" />
+    <End Type="edujinniModel.subject_details" Role="subject_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="subject_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__timetable__secti__41B8C09B">
+    <End Type="edujinniModel.Section" Role="Section" Multiplicity="0..1" />
+    <End Type="edujinniModel.timetable_details" Role="timetable_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="timetable_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__exam_resu__schoo__4E1E9780">
+    <End Type="edujinniModel.school_details" Role="school_details" Multiplicity="0..1" />
+    <End Type="edujinniModel.exam_results" Role="exam_results" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="school_details">
+        <PropertyRef Name="school_id" />
+      </Principal>
+      <Dependent Role="exam_results">
+        <PropertyRef Name="school_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__examclass__secti__4D2A7347">
+    <End Type="edujinniModel.Section" Role="Section" Multiplicity="0..1" />
+    <End Type="edujinniModel.examclass_details" Role="examclass_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Section">
+        <PropertyRef Name="section_id" />
+      </Principal>
+      <Dependent Role="examclass_details">
+        <PropertyRef Name="section_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="edujinniModelStoreContainer" CdmEntityContainer="EdujinniEntity">
+    <EntitySetMapping Name="Achievement_details">
+      <EntityTypeMapping TypeName="edujinniModel.Achievement_details">
+        <MappingFragment StoreEntitySet="Achievement_details">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="achievement_id" ColumnName="achievement_id" />
+          <ScalarProperty Name="achievement_type" ColumnName="achievement_type" />
+          <ScalarProperty Name="achievement_description" ColumnName="achievement_description" />
+          <ScalarProperty Name="achievement_section" ColumnName="achievement_section" />
+          <ScalarProperty Name="achievement_date" ColumnName="achievement_date" />
+          <ScalarProperty Name="achievement_student_name" ColumnName="achievement_student_name" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Admin_details">
+      <EntityTypeMapping TypeName="edujinniModel.Admin_details">
+        <MappingFragment StoreEntitySet="Admin_details">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="dateof_birth" ColumnName="dateof_birth" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="flat_no" ColumnName="flat_no" />
+          <ScalarProperty Name="street1" ColumnName="street1" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="pincode" ColumnName="pincode" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="admin_image" ColumnName="admin_image" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="assignment_details">
+      <EntityTypeMapping TypeName="edujinniModel.assignment_details">
+        <MappingFragment StoreEntitySet="assignment_details">
+          <ScalarProperty Name="assignment_id" ColumnName="assignment_id" />
+          <ScalarProperty Name="assignment_class" ColumnName="assignment_class" />
+          <ScalarProperty Name="assignment_section" ColumnName="assignment_section" />
+          <ScalarProperty Name="assignment_subject" ColumnName="assignment_subject" />
+          <ScalarProperty Name="assignment_enter_topic" ColumnName="assignment_enter_topic" />
+          <ScalarProperty Name="assignment_from_date" ColumnName="assignment_from_date" />
+          <ScalarProperty Name="assignment_to_date" ColumnName="assignment_to_date" />
+          <ScalarProperty Name="assignment_related_test" ColumnName="assignment_related_test" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="attendence_details">
+      <EntityTypeMapping TypeName="edujinniModel.attendence_details">
+        <MappingFragment StoreEntitySet="attendence_details">
+          <ScalarProperty Name="attendence_posted_by" ColumnName="attendence_posted_by" />
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="attendence_id" ColumnName="attendence_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="attendence_section" ColumnName="attendence_section" />
+          <ScalarProperty Name="attendence_setion" ColumnName="attendence_setion" />
+          <ScalarProperty Name="attendence_roll_no" ColumnName="attendence_roll_no" />
+          <ScalarProperty Name="attendence_parent_name" ColumnName="attendence_parent_name" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="attendence_status" ColumnName="attendence_status" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="class_details">
+      <EntityTypeMapping TypeName="edujinniModel.class_details">
+        <MappingFragment StoreEntitySet="class_details">
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="class_name" ColumnName="class_name" />
+          <ScalarProperty Name="class_section_name" ColumnName="class_section_name" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dairy_details">
+      <EntityTypeMapping TypeName="edujinniModel.dairy_details">
+        <MappingFragment StoreEntitySet="dairy_details">
+          <ScalarProperty Name="dairy_id" ColumnName="dairy_id" />
+          <ScalarProperty Name="dairy_class" ColumnName="dairy_class" />
+          <ScalarProperty Name="dairy_section" ColumnName="dairy_section" />
+          <ScalarProperty Name="dairy_date" ColumnName="dairy_date" />
+          <ScalarProperty Name="dairy_subject" ColumnName="dairy_subject" />
+          <ScalarProperty Name="dairy_units" ColumnName="dairy_units" />
+          <ScalarProperty Name="dairy_todays_work" ColumnName="dairy_todays_work" />
+          <ScalarProperty Name="dairy_todays_homework" ColumnName="dairy_todays_homework" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="event_details">
+      <EntityTypeMapping TypeName="edujinniModel.event_details">
+        <MappingFragment StoreEntitySet="event_details">
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="event_id" ColumnName="event_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="event_image" ColumnName="event_image" />
+          <ScalarProperty Name="event_date" ColumnName="event_date" />
+          <ScalarProperty Name="event_name" ColumnName="event_name" />
+          <ScalarProperty Name="event_description" ColumnName="event_description" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exam_details">
+      <EntityTypeMapping TypeName="edujinniModel.exam_details">
+        <MappingFragment StoreEntitySet="exam_details">
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="exam_type" ColumnName="exam_type" />
+          <ScalarProperty Name="exam_start_date" ColumnName="exam_start_date" />
+          <ScalarProperty Name="exam_end_date" ColumnName="exam_end_date" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="exam_results">
+      <EntityTypeMapping TypeName="edujinniModel.exam_results">
+        <MappingFragment StoreEntitySet="exam_results">
+          <ScalarProperty Name="examresult_id" ColumnName="examresult_id" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="examresult_marks" ColumnName="examresult_marks" />
+          <ScalarProperty Name="examresult_total_marks" ColumnName="examresult_total_marks" />
+          <ScalarProperty Name="examresult_subjects" ColumnName="examresult_subjects" />
+          <ScalarProperty Name="examresult_unit" ColumnName="examresult_unit" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="examclass_details">
+      <EntityTypeMapping TypeName="edujinniModel.examclass_details">
+        <MappingFragment StoreEntitySet="examclass_details">
+          <ScalarProperty Name="examclass_id" ColumnName="examclass_id" />
+          <ScalarProperty Name="examclass_class" ColumnName="examclass_class" />
+          <ScalarProperty Name="examclass_section" ColumnName="examclass_section" />
+          <ScalarProperty Name="examclass_exam_type" ColumnName="examclass_exam_type" />
+          <ScalarProperty Name="examclass_start_date" ColumnName="examclass_start_date" />
+          <ScalarProperty Name="examclass_end_date" ColumnName="examclass_end_date" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="examsubject_details">
+      <EntityTypeMapping TypeName="edujinniModel.examsubject_details">
+        <MappingFragment StoreEntitySet="examsubject_details">
+          <ScalarProperty Name="examsubject_syllabus" ColumnName="examsubject_syllabus" />
+          <ScalarProperty Name="examclass_id" ColumnName="examclass_id" />
+          <ScalarProperty Name="exam_id" ColumnName="exam_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="examsubject_id" ColumnName="examsubject_id" />
+          <ScalarProperty Name="examsubject_class" ColumnName="examsubject_class" />
+          <ScalarProperty Name="examsubject_section" ColumnName="examsubject_section" />
+          <ScalarProperty Name="examsubject_subject_name" ColumnName="examsubject_subject_name" />
+          <ScalarProperty Name="examsubject_subject_type" ColumnName="examsubject_subject_type" />
+          <ScalarProperty Name="examsubject_marks" ColumnName="examsubject_marks" />
+          <ScalarProperty Name="examsubject_date" ColumnName="examsubject_date" />
+          <ScalarProperty Name="examsubject_start_time" ColumnName="examsubject_start_time" />
+          <ScalarProperty Name="examsubject_end_time" ColumnName="examsubject_end_time" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="guest_signup">
+      <EntityTypeMapping TypeName="edujinniModel.guest_signup">
+        <MappingFragment StoreEntitySet="guest_signup">
+          <ScalarProperty Name="guest_id" ColumnName="guest_id" />
+          <ScalarProperty Name="first_name" ColumnName="first_name" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="mobile_no" ColumnName="mobile_no" />
+          <ScalarProperty Name="dateof_birth" ColumnName="dateof_birth" />
+          <ScalarProperty Name="create_pswd" ColumnName="create_pswd" />
+          <ScalarProperty Name="confirm_pswd" ColumnName="confirm_pswd" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="leaverequests">
+      <EntityTypeMapping TypeName="edujinniModel.leaverequest">
+        <MappingFragment StoreEntitySet="leaverequest">
+          <ScalarProperty Name="leaverequest_id" ColumnName="leaverequest_id" />
+          <ScalarProperty Name="leaverequest_from_date" ColumnName="leaverequest_from_date" />
+          <ScalarProperty Name="leaverequest_to_date" ColumnName="leaverequest_to_date" />
+          <ScalarProperty Name="leaverequest_description" ColumnName="leaverequest_description" />
+          <ScalarProperty Name="leaverequest_requested_by" ColumnName="leaverequest_requested_by" />
+          <ScalarProperty Name="leaverequest_status" ColumnName="leaverequest_status" />
+          <ScalarProperty Name="leaverequest_aproved_by" ColumnName="leaverequest_aproved_by" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="school_details">
+      <EntityTypeMapping TypeName="edujinniModel.school_details">
+        <MappingFragment StoreEntitySet="school_details">
+          <ScalarProperty Name="admin_image" ColumnName="admin_image" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="admin_mobile_no" ColumnName="admin_mobile_no" />
+          <ScalarProperty Name="admin_email" ColumnName="admin_email" />
+          <ScalarProperty Name="admin_full_name" ColumnName="admin_full_name" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="school_name" ColumnName="school_name" />
+          <ScalarProperty Name="school_flat_no" ColumnName="school_flat_no" />
+          <ScalarProperty Name="school_street" ColumnName="school_street" />
+          <ScalarProperty Name="school_area" ColumnName="school_area" />
+          <ScalarProperty Name="school_city" ColumnName="school_city" />
+          <ScalarProperty Name="school_state" ColumnName="school_state" />
+          <ScalarProperty Name="school_pincode" ColumnName="school_pincode" />
+          <ScalarProperty Name="school_phone_no" ColumnName="school_phone_no" />
+          <ScalarProperty Name="school_reg_no" ColumnName="school_reg_no" />
+          <ScalarProperty Name="school_image" ColumnName="school_image" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sections">
+      <EntityTypeMapping TypeName="edujinniModel.Section">
+        <MappingFragment StoreEntitySet="Section">
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="section_name" ColumnName="section_name" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="student_details">
+      <EntityTypeMapping TypeName="edujinniModel.student_details">
+        <MappingFragment StoreEntitySet="student_details">
+          <ScalarProperty Name="parent_password" ColumnName="parent_password" />
+          <ScalarProperty Name="student_password" ColumnName="student_password" />
+          <ScalarProperty Name="student_admission_id" ColumnName="student_admission_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="student_id" ColumnName="student_id" />
+          <ScalarProperty Name="student_image" ColumnName="student_image" />
+          <ScalarProperty Name="student_section" ColumnName="student_section" />
+          <ScalarProperty Name="student_first_name" ColumnName="student_first_name" />
+          <ScalarProperty Name="student_last_name" ColumnName="student_last_name" />
+          <ScalarProperty Name="student_roll_no" ColumnName="student_roll_no" />
+          <ScalarProperty Name="student_chiled_no" ColumnName="student_chiled_no" />
+          <ScalarProperty Name="student_dob" ColumnName="student_dob" />
+          <ScalarProperty Name="student_gender" ColumnName="student_gender" />
+          <ScalarProperty Name="student_father_name" ColumnName="student_father_name" />
+          <ScalarProperty Name="student_father_mobile_no" ColumnName="student_father_mobile_no" />
+          <ScalarProperty Name="student_father_occupation" ColumnName="student_father_occupation" />
+          <ScalarProperty Name="student_mother_name" ColumnName="student_mother_name" />
+          <ScalarProperty Name="student_mother_mobile_no" ColumnName="student_mother_mobile_no" />
+          <ScalarProperty Name="student_mother_occupation" ColumnName="student_mother_occupation" />
+          <ScalarProperty Name="student_no_of_siblings" ColumnName="student_no_of_siblings" />
+          <ScalarProperty Name="student_flat_no" ColumnName="student_flat_no" />
+          <ScalarProperty Name="student_buliding_name" ColumnName="student_buliding_name" />
+          <ScalarProperty Name="student_street" ColumnName="student_street" />
+          <ScalarProperty Name="student_street1" ColumnName="student_street1" />
+          <ScalarProperty Name="student_area" ColumnName="student_area" />
+          <ScalarProperty Name="student_city" ColumnName="student_city" />
+          <ScalarProperty Name="student_state" ColumnName="student_state" />
+          <ScalarProperty Name="student_pincode" ColumnName="student_pincode" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="student_admission_date" ColumnName="student_admission_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="Student_status" ColumnName="Student_status" />
+          <ScalarProperty Name="student_class" ColumnName="student_class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subject_details">
+      <EntityTypeMapping TypeName="edujinniModel.subject_details">
+        <MappingFragment StoreEntitySet="subject_details">
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+          <ScalarProperty Name="section" ColumnName="section" />
+          <ScalarProperty Name="subject_type" ColumnName="subject_type" />
+          <ScalarProperty Name="subject_name" ColumnName="subject_name" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="syllabus_details">
+      <EntityTypeMapping TypeName="edujinniModel.syllabus_details">
+        <MappingFragment StoreEntitySet="syllabus_details">
+          <ScalarProperty Name="syllabus_id" ColumnName="syllabus_id" />
+          <ScalarProperty Name="syllabus_class" ColumnName="syllabus_class" />
+          <ScalarProperty Name="syllabus_subject" ColumnName="syllabus_subject" />
+          <ScalarProperty Name="syllabus_unit" ColumnName="syllabus_unit" />
+          <ScalarProperty Name="syllabus_subunit" ColumnName="syllabus_subunit" />
+          <ScalarProperty Name="syllabus_topic" ColumnName="syllabus_topic" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="teacher_details">
+      <EntityTypeMapping TypeName="edujinniModel.teacher_details">
+        <MappingFragment StoreEntitySet="teacher_details">
+          <ScalarProperty Name="teacher_status" ColumnName="teacher_status" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+          <ScalarProperty Name="teacher_image" ColumnName="teacher_image" />
+          <ScalarProperty Name="teacher_first_name" ColumnName="teacher_first_name" />
+          <ScalarProperty Name="teacher_last_name" ColumnName="teacher_last_name" />
+          <ScalarProperty Name="teacher_email" ColumnName="teacher_email" />
+          <ScalarProperty Name="teacher_phone_no" ColumnName="teacher_phone_no" />
+          <ScalarProperty Name="teacher_dob" ColumnName="teacher_dob" />
+          <ScalarProperty Name="teacher_gender" ColumnName="teacher_gender" />
+          <ScalarProperty Name="teacher_subject1" ColumnName="teacher_subject1" />
+          <ScalarProperty Name="teacher_subject2" ColumnName="teacher_subject2" />
+          <ScalarProperty Name="teacher_qualification" ColumnName="teacher_qualification" />
+          <ScalarProperty Name="teacher_department" ColumnName="teacher_department" />
+          <ScalarProperty Name="teacher_flat_no" ColumnName="teacher_flat_no" />
+          <ScalarProperty Name="teacher_street" ColumnName="teacher_street" />
+          <ScalarProperty Name="teacher_area" ColumnName="teacher_area" />
+          <ScalarProperty Name="teacher_city" ColumnName="teacher_city" />
+          <ScalarProperty Name="teacher_state" ColumnName="teacher_state" />
+          <ScalarProperty Name="teacher_pincode" ColumnName="teacher_pincode" />
+          <ScalarProperty Name="teacher_date_of_joining" ColumnName="teacher_date_of_joining" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+          <ScalarProperty Name="teacher_teacherid" ColumnName="teacher_teacherid" />
+          <ScalarProperty Name="teacher_buildingname" ColumnName="teacher_buildingname" />
+          <ScalarProperty Name="teacher_street1" ColumnName="teacher_street1" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="timetable_details">
+      <EntityTypeMapping TypeName="edujinniModel.timetable_details">
+        <MappingFragment StoreEntitySet="timetable_details">
+          <ScalarProperty Name="section_id" ColumnName="section_id" />
+          <ScalarProperty Name="timetable_id" ColumnName="timetable_id" />
+          <ScalarProperty Name="timetable_day" ColumnName="timetable_day" />
+          <ScalarProperty Name="subject_id" ColumnName="subject_id" />
+          <ScalarProperty Name="teacher_id" ColumnName="teacher_id" />
+          <ScalarProperty Name="class_id" ColumnName="class_id" />
+          <ScalarProperty Name="timetable_section" ColumnName="timetable_section" />
+          <ScalarProperty Name="timetable_start_time" ColumnName="timetable_start_time" />
+          <ScalarProperty Name="timetable_end_time" ColumnName="timetable_end_time" />
+          <ScalarProperty Name="insert_by" ColumnName="insert_by" />
+          <ScalarProperty Name="insert_date" ColumnName="insert_date" />
+          <ScalarProperty Name="update_by" ColumnName="update_by" />
+          <ScalarProperty Name="update_date" ColumnName="update_date" />
+          <ScalarProperty Name="school_id" ColumnName="school_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
